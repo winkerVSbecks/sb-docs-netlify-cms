@@ -1,0 +1,24 @@
+story {
+  display: block;
+  height: 64px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+story:before {
+  content: attr(name) ' story';
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+iframe {
+  position: absolute;
+  display: block;
+  box-sizing: content-box;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
