@@ -1,19 +1,19 @@
- import React from 'react';
+import React from 'react';
 
- import { GlobalStyle } from '../src/shared/global';
+import { GlobalStyle } from '../src/shared/global';
 
- // Global decorator to apply the styles to all stories
- export const decorators = [
-   Story => (
-     <>
-       <GlobalStyle />
-       <Story />
-     </>
-   ),
- ];
+// Global decorator to apply the styles to all stories
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyle />
+      <Story />
+    </>
+  ),
+];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -24,7 +24,12 @@ export const parameters = {
   a11y: {
     // the target DOM element
     element: '#root',
-     // sets the execution mode for the addon
+    // sets the execution mode for the addon
     manual: false,
   },
-}
+  options: {
+    storySort: {
+      order: ['Introduction', 'Styles', 'Components'],
+    },
+  },
+};

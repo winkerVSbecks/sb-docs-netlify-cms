@@ -12,31 +12,31 @@
     <script>
       CMS.registerPreviewStyle('preview.css');
 
-      var CanvasPreview = createClass({
-        render: function () {
-          var entry = this.props.entry;
-          var title = entry.getIn(['data', 'title']);
-          console.log(
-            `/?iframe.html?id=design-system-${title}--standard&viewMode=docs`,
-            '/iframe.html?id=design-system-avatar--standard&viewMode=docs'
-          );
+      // var CanvasPreview = createClass({
+      //   render: function () {
+      //     var entry = this.props.entry;
+      //     var title = entry.getIn(['data', 'title']);
+      //     console.log(
+      //       `/?iframe.html?id=design-system-${title}--standard&viewMode=docs`,
+      //       '/iframe.html?id=design-system-avatar--standard&viewMode=docs'
+      //     );
 
-          return h('iframe', {
-            // src: `/iframe.html?id=design-system-${title}--page&viewMode=story`,
-            src: `/iframe.html?id=design-system-${title}--standard&viewMode=docs`,
-            // src: '/iframe.html?id=design-system-avatar--standard&viewMode=docs',
-            style: {
-              position: 'absolute',
-              display: 'block',
-              boxSizing: 'content-box',
-              height: '100%',
-              width: '100%',
-            },
-          });
-        },
-      });
+      //     return h('iframe', {
+      //       // src: `/iframe.html?id=design-system-${title}--page&viewMode=story`,
+      //       // src: `/iframe.html?id=design-system-${title}--standard&viewMode=docs`,
+      //       // src: '/iframe.html?id=design-system-avatar--standard&viewMode=docs',
+      //       style: {
+      //         position: 'absolute',
+      //         display: 'block',
+      //         boxSizing: 'content-box',
+      //         height: '100%',
+      //         width: '100%',
+      //       },
+      //     });
+      //   },
+      // });
 
-      CMS.registerPreviewTemplate('docs', CanvasPreview);
+      // CMS.registerPreviewTemplate('docs', CanvasPreview);
     </script>
   </body>
 </html>

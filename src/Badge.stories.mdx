@@ -1,0 +1,95 @@
+<!-- title: badge -->
+
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { Badge } from './Badge';
+import { Icon } from './Icon';
+
+# Badge
+
+<Meta title="Components/Badge" component={Badge} />
+
+<Canvas>
+  <Story
+    name="AllBadges"
+    args={{
+      icon: 'facehappy',
+      inline: true,
+    }}
+  >
+    {(args) => (
+      <div>
+        <Badge status="positive">Positive</Badge>
+        <Badge status="negative">Negative</Badge>
+        <Badge status="neutral">Neutral</Badge>
+        <Badge status="error">Error</Badge>
+        <Badge status="warning">Warning</Badge>
+        <Badge status="positive">
+          <Icon {...args} />
+          with icon
+        </Badge>
+      </div>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="AllBadges" />
+
+### Positive
+
+<Canvas>
+  <Story name="Positive">
+    <Badge status="positive">Positive</Badge>
+  </Story>
+</Canvas>
+
+### Negative
+
+<Canvas>
+  <Story name="Negative">
+    <Badge status="negative">Negative</Badge>
+  </Story>
+</Canvas>
+
+### Warning
+
+<Canvas>
+  <Story name="Warning">
+    <Badge status="warning">Warning</Badge>
+  </Story>
+</Canvas>
+
+### Neutral
+
+<Canvas>
+  <Story name="Neutral">
+    <Badge status="neutral">Neutral</Badge>
+  </Story>
+</Canvas>
+
+### Error
+
+<Canvas>
+  <Story name="Error">
+    <Badge status="error">Error</Badge>
+  </Story>
+</Canvas>
+
+### With Icon
+
+<Canvas>
+  <Story
+    name="WithIcon"
+    args={{
+      status: 'warning',
+      icon: 'check',
+      inline: true,
+    }}
+  >
+    {(args) => (
+      <Badge {...args}>
+        <Icon {...args} />
+        with icon
+      </Badge>
+    )}
+  </Story>
+</Canvas>
